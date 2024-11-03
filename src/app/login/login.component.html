@@ -1,0 +1,22 @@
+<div class="main-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h1>Welcome to 2DSTAT</h1>
+        <p>Login with your account</p>
+
+        <input type="email" formControlName="email" placeholder="Email">
+        <input type="password" id="password" formControlName="password" placeholder="Password">
+        <span toggle="#password" class="toggle-password" (click)="togglePasswordVisibility()">
+            <i class="fas fa-eye"></i>
+        </span>
+
+        <a routerLink="/forgot-password">Forgot password?</a>
+
+        <button type="submit">Sign in</button>
+
+        <p>Don't have an account? <a routerLink="/signup">create account</a></p> 
+    </form>
+
+    @if (errorMessage) {
+        <div>{{ errorMessage }}</div>
+    }
+</div>

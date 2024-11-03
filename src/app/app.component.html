@@ -1,0 +1,39 @@
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a></li>
+    <li style="float:right"><a routerLink="/login" routerLinkActive="active-link">Login</a></li>
+    <li style="float:right"><a routerLink="/signup" routerLinkActive="active-link">Signup</a></li>
+  </ul>  
+  
+  <router-outlet></router-outlet>
+</body>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>Contact Us</h2>
+      <p><i class="fas fa-phone"></i> (+94)76 123 456</p>
+      <p><i class="fas fa-envelope"></i> support&#64;2dstat.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> 123, Colombo, Sri Lanka</p>
+    </div>
+
+    <div class="footer-right">
+      <h2>Follow Us</h2>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 2DSTAT. All Rights Reserved.</p>
+  </div>
+</footer>  

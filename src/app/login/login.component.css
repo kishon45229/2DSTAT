@@ -1,0 +1,135 @@
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 100%;
+}
+            
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 10;
+    text-align: center;
+    font-size: large;
+    font-weight: 400;
+}
+                    
+form {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4CAF50;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+            
+#password {  
+    display: block;
+    padding-right: 40px;
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4CAF50;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+            
+.toggle-password {
+    position: absolute;
+    top: 47%;
+    right: 555px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+button {
+    font-size: 14pt; 
+    color: white; 
+    padding: 12px 25px; 
+    margin: 0px 10px; 
+    background-color: #4CAF50; 
+    border-radius: 30px;
+    border: 2px solid #4CAF50; 
+    text-decoration: none; 
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; 
+    width: 100%;
+    margin-top: 20px;
+  }           
+            
+button:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+            
+.fbutton {
+    background-color: #012853;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 250px;
+}
+            
+.fbutton:hover {
+    background-color: black;
+}
+            
+.popup-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+} 
+              
+.popup-notification h2 {
+    margin-top: 0;
+}
+
+.popup-notification p {
+    margin-bottom: 20px;
+}
+
+.popup-notification button {
+    display: block;
+    margin: auto;
+}
+            
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    backdrop-filter: blur(5px);
+}    
