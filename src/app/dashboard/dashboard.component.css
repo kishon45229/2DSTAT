@@ -1,0 +1,29 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between charts */
+  padding: 20px;
+}
+
+.chart {
+  width: 100%; /* Set each chart to full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.flourish-embed-iframe {
+  border: none;
+}
+
+.flourish-credit {
+  margin-top: 4px;
+  text-align: right;
+}
+.flourish-credit img {
+  width: 105px;
+  height: 16px;
+  border: none;
+}

@@ -23,10 +23,10 @@ import { AuthService } from '../auth.service';
   selector: 'app-login',
   standalone: true,
   imports: [ReactiveFormsModule, RouterLink, RouterOutlet],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './login-supermarket.component.html',
+  styleUrl: './login-supermarket.component.css'
 })
-export class LoginComponent {
+export class LoginSupermarketComponent {
   fb = inject(FormBuilder);
   http = inject(HttpClient);
   router = inject(Router)

@@ -1,9 +1,9 @@
 <div class="main-container">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <h1>Welcome to 2DSTAT</h1>
+        <h1>Create Supermarket Account</h1>
         <p>Enter the below details</p>
     
-        <input type="text" id="txt" placeholder="Company name" formControlName="username" />
+        <input type="text" id="txt" placeholder="Supermarket name" formControlName="username" />
         <input type="email" id="email" placeholder="Email" formControlName="email" />
         <input type="password" id="password" placeholder="Password" formControlName="password" />
         <span toggle="#password" class="toggle-password" (click)="togglePasswordVisibility()">

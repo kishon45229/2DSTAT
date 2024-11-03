@@ -1,7 +1,7 @@
 <div class="main-container">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <h1>Welcome to 2DSTAT</h1>
-        <p>Login with your account</p>
+        <p>Login with your manufacturer account</p>
 
         <input type="email" formControlName="email" placeholder="Email">
         <input type="password" id="password" formControlName="password" placeholder="Password">
@@ -13,7 +13,7 @@
 
         <button type="submit">Sign in</button>
 
-        <p>Don't have an account? <a routerLink="/signup">create account</a></p> 
+        <p>Don't have an account? <a routerLink="/signup-manufacturer">create account</a></p> 
     </form>
 
     @if (errorMessage) {

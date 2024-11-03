@@ -26,6 +26,7 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     height: fit-content;
     margin: auto;
+    width: 350px;
 }
 
 #email {
@@ -63,8 +64,17 @@ form {
             
 .toggle-password {
     position: absolute;
-    top: 47%;
-    right: 555px;
+    top: 55.5%;
+    right: 590px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.toggle-confirm-password {
+    position: absolute;
+    top: 64%;
+    right: 590px;
     transform: translateY(-50%);
     transform: translateX(-50%);
     cursor: pointer;

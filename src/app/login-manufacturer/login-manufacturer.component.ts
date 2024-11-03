@@ -1,52 +1,52 @@
 /*import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-signup',
+  selector: 'app-login',
   standalone: true,
   imports: [],
-  templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
 })
-export class SignupComponent {
+export class LoginComponent {
 
-}*/
+}
+*/
 
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'app-signup',
+  selector: 'app-login',
   standalone: true,
   imports: [ReactiveFormsModule, RouterLink, RouterOutlet],
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  templateUrl: './login-manufacturer.component.html',
+  styleUrl: './login-manufacturer.component.css'
 })
-export class SignupComponent {
+export class LoginManufacturerComponent {
   fb = inject(FormBuilder);
   http = inject(HttpClient);
-  router = inject(Router);
+  router = inject(Router)
   authService = inject(AuthService)
 
   form = this.fb.nonNullable.group({
-    username: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
-    confirmPassword: ['', Validators.required],
   });
   errorMessage: string | null = null;
 
   onSubmit(): void {
     const rawForm = this.form.getRawValue()
     this.authService
-    .signup(rawForm.email, rawForm.username, rawForm.password)
+    .signin(rawForm.email, rawForm.password)
     .subscribe({
       next:() => {
-        this.router.navigateByUrl('/');
-        console.log('Successfully registered!');
-        alert("Successfully registered!")
+        this.router.navigateByUrl('/dashboard');
+        console.log('Successfully logged in!');
+        alert("Successfully logged in!")
       },
       error: (err) => {
         this.errorMessage = err.code;
@@ -60,14 +60,6 @@ export class SignupComponent {
     const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordField.setAttribute('type', type);
     const icon = document.querySelector('.toggle-password i');
-    icon?.classList.toggle('fa-eye-slash');
-  }
-
-  toggleConfirmPasswordVisibility() {
-    const confirmPasswordField = document.getElementById('confirm-password') as HTMLInputElement;
-    const type = confirmPasswordField.getAttribute('type') === 'password' ? 'text' : 'password';
-    confirmPasswordField.setAttribute('type', type);
-    const icon = document.querySelector('.toggle-confirm-password i');
     icon?.classList.toggle('fa-eye-slash');
   }
 }

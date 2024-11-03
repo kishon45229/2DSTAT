@@ -1,0 +1,25 @@
+<div class="main-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h1>Create Supermarket Account</h1>
+        <p>Enter the below details</p>
+    
+        <input type="text" id="txt" placeholder="Supermarket name" formControlName="username" />
+        <input type="email" id="email" placeholder="Email" formControlName="email" />
+        <input type="password" id="password" placeholder="Password" formControlName="password" />
+        <span toggle="#password" class="toggle-password" (click)="togglePasswordVisibility()">
+            <i class="fas fa-eye"></i>
+        </span>
+        <input type="password" id="password" placeholder="Re-type password" formControlName="confirm-password" />
+        <span toggle="#confirm-password" class="toggle-confirm-password" (click)="toggleConfirmPasswordVisibility()">
+            <i class="fas fa-eye"></i>
+        </span>
+    
+        <button type="submit">Sign Up</button>
+
+        <p>Already have an account? <a routerLink="/signup">login</a></p> 
+    </form>
+
+    @if (errorMessage) {
+        <div>{{ errorMessage }}</div>
+    }
+</div>  
